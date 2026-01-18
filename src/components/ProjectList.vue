@@ -43,7 +43,19 @@
 								sitehref: '#'
 							},
 						]
-					}
+					},
+					{
+						titleList: 'Ether project',
+						icon: '#ether',
+						projects: [
+							{
+								title: 'Soon',
+								description: 'soon...',
+								rephref: '#',
+								sitehref: '#'
+							},
+						]
+					},
 				]
 
 			}
