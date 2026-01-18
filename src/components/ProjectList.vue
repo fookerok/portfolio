@@ -1,23 +1,26 @@
 <template>
-	<div 
-	v-for="(list, listIndex) in projectList"
-	:key="listIndex"
-	class="bg-white rounded-xl shadow-sm p-6">
-	<div class="flex gap-2 items-center text-lg">
-		<SvgIcon class="w-6 h-6" :icon="list.icon"/>
-		<h3 class="title__list">{{ list.titleList }}</h3>
+	<div class="flex flex-col gap-6">
+		<div 
+		v-for="(list, listIndex) in projectList"
+		:key="listIndex"
+		class="bg-white rounded-xl shadow-sm p-6">
+		<div class="flex gap-2 items-center text-lg">
+			<SvgIcon class="w-6 h-6" :icon="list.icon"/>
+			<h3 class="title__list">{{ list.titleList }}</h3>
+		</div>
+
+			<ProjectItem
+				v-for="(project, index) in list.projects"
+				:key="index"
+				:titleList="list.titleList"
+				:title="project.title"
+				:description="project.description"
+				:rephref="project.rephref"
+				:sitehref="project.sitehref"
+			/>
+		</div>
 	</div>
 
-		<ProjectItem
-			v-for="(project, index) in list.projects"
-			:key="index"
-			:titleList="list.titleList"
-			:title="project.title"
-			:description="project.description"
-			:rephref="project.rephref"
-			:sitehref="project.sitehref"
-		/>
-	</div>
 </template>
 
 <script>
