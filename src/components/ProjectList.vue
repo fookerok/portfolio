@@ -60,7 +60,6 @@
 						]
 					},
 				]
-
 			}
 		},
 		name: 'ProjectList',
