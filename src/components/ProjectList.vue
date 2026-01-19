@@ -36,8 +36,8 @@
 							{
 								title: 'Escadrille server',
 								description: 'Сайт для сервера по игре Minecraft, работа с данными API сервера, галерея',
-								rephref: '#',
-								sitehref: '#'
+								rephref: 'https://github.com/fookerok/escadrille',
+								sitehref: 'https://escadrille.vercel.app/'
 							},
 							{
 								title: 'Расходняк',
