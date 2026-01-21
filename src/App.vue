@@ -7,9 +7,28 @@
 			<div class="img-block rounded-xl overflow-hidden mb-8">
 				<img class="object-cover" src="./assets/img/myphoto.webp" alt="">
 			</div>
-			<div class="flex text-center flex-col gap-1 mb-6">
-				<h1 class="title text-xl font-semibold">Frontend pet project</h1>
-				<h2 class="subtitle text-lg text-slate-500">Мои пет-проекты</h2>
+			<div class="flex justify-between px-6">
+				<div class="flex flex-col gap-1 mb-6">
+					<h1 class="title text-xl font-semibold">Frontend pet project</h1>
+					<h2 class="subtitle text-lg text-slate-500">Мои пет-проекты</h2>
+				</div>
+				<div class="flex flex-col gap-1 mb-6">
+  <button
+    @click="toggleTheme"
+    class="px-4 py-2 rounded transition-colors duration-300
+           bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200"
+  >
+    {{ isDark ? 'Светлая тема' : 'Темная тема' }}
+  </button>
+					<div class="flex gap-1">
+						<a class="contact-link" href="https://t.me/fookernya" target="_blank">
+							<SvgIcon class="w-6 h-6 def-icon fill-current text-black hover:text-slate-500 transition-colors duration-300" icon="#telegram"/>
+						</a>
+						<a class="contact-link" href="https://github.com/fookerok" target="_blank">
+							<SvgIcon class="w-6 h-6 def-icon fill-current  text-black hover:text-slate-500 transition-colors duration-300" icon="#github"/>
+						</a>
+					</div>
+				</div>
 			</div>
 			<ProjectList/>
 			</div>
@@ -41,7 +60,6 @@ export default {
 		this.startLoading()
 	}
 }
-
 </script>
 
 <style lang="scss">

@@ -8,7 +8,6 @@
 			<SvgIcon class="w-6 h-6" :icon="list.icon"/>
 			<h3 class="title__list">{{ list.titleList }}</h3>
 		</div>
-
 			<ProjectItem
 				v-for="(project, index) in list.projects"
 				:key="index"
@@ -20,7 +19,6 @@
 			/>
 		</div>
 	</div>
-
 </template>
 
 <script>
