@@ -59,7 +59,7 @@ const fetchSettings = async () => {
 
 const saveSettings = async () => {
   try {
-    await axios.put('http://localhost:3000/api/settings', settings.value);
+    await axios.put(`${import.meta.env.VITE_API_URL}/settings`, settings.value);
     document.title = settings.value.site_title;
     alert('Настройки успешно сохранены!');
   } catch (e) {

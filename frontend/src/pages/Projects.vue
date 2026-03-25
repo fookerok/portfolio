@@ -90,7 +90,7 @@
 
     const fetchCategories = async () => {
     try {
-        const res = await axios.get('http://localhost:3000/api/categories');
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}/categories`);
         categories.value = res.data;
     } catch (err) {
         console.error('Ошибка загрузки категорий', err);
@@ -99,7 +99,7 @@
 
     const fetchProjects = async () =>{
         try{
-            const res = await axios.get('http://localhost:3000/api/projects');
+            const res = await axios.get(`${import.meta.env.VITE_API_URL}/projects`);
             projects.value = res.data;
         } catch (err){
             console.error('Ошибка загрузки', err);
@@ -111,7 +111,7 @@
         try {
             console.log('Удаляем id:', id);
 
-            await axios.delete(`http://localhost:3000/api/projects/${id}`);
+            await axios.delete(`${import.meta.env.VITE_API_URL}/projects/${id}`);
             projects.value = projects.value.filter(p => p.id !== id);
 
             alert('Проект удалён');

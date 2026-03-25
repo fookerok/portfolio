@@ -53,7 +53,7 @@ const category_id = ref('');
 
 const fetchCategories = async () => {
   try {
-    const res = await axios.get('http://localhost:3000/api/categories');
+    const res = await axios.get(`${import.meta.env.VITE_API_URL}/categories`);
     categories.value = res.data;
   } catch (err) {
     console.error('Ошибка загрузки категорий', err);
