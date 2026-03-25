@@ -46,7 +46,7 @@ const settings = ref({
 
 const loadAppData = async () => {
     try {
-        const res = await axios.get('http://localhost:3000/api/settings');
+       const res = await axios.get(`${import.meta.env.VITE_API_URL}/settings`);
         if (res.data) {
             settings.value = res.data;
             document.title = settings.value.site_title || 'Portfolio';

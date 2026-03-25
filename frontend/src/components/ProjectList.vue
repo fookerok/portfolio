@@ -53,7 +53,7 @@
 
     const fetchProjects = async () => {
         try {
-            const res = await axios.get('http://localhost:3000/api/projects');
+            const res = await axios.get(`${import.meta.env.VITE_API_URL}/projects`);
             projects.value = res.data;
         } catch (err) {
             console.error('Ошибка загрузки', err);

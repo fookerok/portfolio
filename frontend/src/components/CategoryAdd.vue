@@ -79,7 +79,7 @@ const submitProject = async () => {
       category_id: Number(category_id.value) || null
     };
 
-    const res = await axios.post('http://localhost:3000/api/projects', payload);
+    const res = await axios.post(`${import.meta.env.VITE_API_URL}/projects`, payload);
 
     alert(`Проект "${res.data.name}" добавлен!`);
 

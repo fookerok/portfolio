@@ -123,7 +123,7 @@
 
     const editProject = async (project) => {
         try {
-            await axios.put(`http://localhost:3000/api/projects/${project.id}`, {
+            await axios.put(`${import.meta.env.VITE_API_URL}/projects/${project.id}`, {
             name: project.name,
             descr: project.descr,
             linkSite: project.linkSite,
