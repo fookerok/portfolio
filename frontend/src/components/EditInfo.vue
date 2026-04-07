@@ -1,37 +1,25 @@
 <template>
-    <div class="overflow-x-auto bg-white rounded-xl shadow-sm">
-         <form @submit.prevent="submitProject">
-
-            <div class="form-group">
-                <label for="name">Название сайта</label>
-                <input v-model="settings.site_title" type="text" name="name" id="name" required>
+        <form @submit.prevent="submitProject">
+          <div class="overflow-x-auto bg-white rounded-xl shadow-sm">
+            <div v-for="field in fields" :key="field.id" class="form-group flex flex-col">
+                <label class="text-lg font-bold bg-gray-50 border-b border-gray-200 py-1 px-2" :for="field.id">{{ field.label }}</label>
+                <input
+                class="font-semibold p-2 focus:outline-none"
+                v-model="settings[field.key]" 
+                :id="field.id" 
+                :name="field.id"
+                type="text" 
+                required
+                >
             </div>
-
-            <div class="form-group">
-                <label for="name">Заголовок</label>
-                <input v-model="settings.site_name" type="text" name="name" id="name" required>
-            </div>
-
-            <div class="form-group">
-                <label for="descr">Описание</label>
-                <input v-model="settings.site_description" type="text" name="descr" id="descr" required>
-            </div>
-
-            <div class="form-group">
-                <label for="linkSite">Ссылка на тг</label>
-                <input v-model="settings.link_tg" type="text" name="linkSite" id="linkSite" required>
-            </div>
-
-            <div class="form-group">
-                <label for="linkGit">Ссылка на гитхаб</label>
-                <input v-model="settings.link_git" type="text" name="linkGit" id="linkGit" required>
-            </div>
-            <div class="form-group">
-                <button @click="saveSettings" type="submit">Сохранить</button>
-            </div>
-
+          </div>
+          <div class="form-group my-4 mx-2">
+            <button 
+            class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition" 
+            @click="saveSettings" 
+            type="submit">Сохранить</button>
+          </div>
         </form>
-    </div>
 </template>
 
 <script setup>
@@ -44,6 +32,14 @@ const settings = ref({
   link_tg: '',
   link_git: ''
 });
+
+const fields = [
+  { key: 'site_title', label: 'Название сайта:', id: 'title' },
+  { key: 'site_name', label: 'Заголовок:', id: 'name' },
+  { key: 'site_description', label: 'Описание:', id: 'descr' },
+  { key: 'link_tg', label: 'Ссылка на тг:', id: 'linkSite' },
+  { key: 'link_git', label: 'Ссылка на гитхаб:', id: 'linkGit' }
+];
 
 const fetchSettings = async () => {
   try {

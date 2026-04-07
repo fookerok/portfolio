@@ -1,6 +1,5 @@
 <template>
     <div class="admin-layout flex">
-        <DefAside />
         <div class="main-container">
             <DefHeader />
             <main class="content">
@@ -13,8 +12,6 @@
 
 <script setup>
 import DefHeader from '../components/layouts/DefHeader.vue';
-import DefAside from '../components/layouts/DefAside.vue';
-
 </script>
 
 <style lang="scss" scoped>

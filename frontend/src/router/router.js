@@ -14,7 +14,8 @@ const routes = [
   },
   {
     path: '/admin',
-    component: Admin
+    component: Admin,
+    redirect: '/admin/projects',
   },
   {
     path: '/admin/projects',
