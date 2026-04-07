@@ -34,10 +34,9 @@ import DefHeader from '../components/layouts/DefHeader.vue';
 
 .content {
   flex: 1;
-  padding: 20px;
+  padding: 8px;
   overflow-y: auto;
   overflow-x: hidden;
-  background-color: #f9fafb;
 }
 
 .page-wrapper {
