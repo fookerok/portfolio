@@ -1,13 +1,15 @@
 <template>
-    <div class="admin-layout flex">
-        <div class="main-container">
-            <DefHeader />
-            <main class="content">
-                <router-view /> 
-                <slot></slot>
-            </main>
+  <div class="admin-layout">
+    <div class="main-container">
+      <DefHeader />
+      <main class="content">
+        <div class="page-wrapper">
+          <router-view /> 
+          <slot></slot>
         </div>
+      </main>
     </div>
+  </div>
 </template>
 
 <script setup>
@@ -16,17 +18,31 @@ import DefHeader from '../components/layouts/DefHeader.vue';
 
 <style lang="scss" scoped>
 .admin-layout {
-  min-height: 100vh;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .main-container {
-  flex-grow: 1; 
   display: flex;
   flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  height: 100%;
 }
 
 .content {
+  flex: 1;
   padding: 20px;
   overflow-y: auto;
+  overflow-x: hidden;
+  background-color: #f9fafb;
+}
+
+.page-wrapper {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
 }
 </style>
