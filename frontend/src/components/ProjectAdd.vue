@@ -40,7 +40,7 @@
     </div>
     <div class="px-4 py-2 overflow-x-auto bg-white rounded-xl shadow-sm p-4">
       <form @submit.prevent="submitCategory" class="mb-4">
-        <div class="grid grid-cols-[68px_1fr_96px] items-center gap-2">
+        <div class="grid grid-cols-[68px_auto_96px] items-center gap-2">
           <label class="text-sm font-medium">Название</label>
           <input
             v-model="newCategory"
@@ -51,7 +51,7 @@
         </div>
       </form>
       <form @submit.prevent="deleteCategory">
-        <div class="grid grid-cols-[68px_1fr_96px] items-center gap-2">
+        <div class="grid grid-cols-[68px_auto_96px] items-center gap-2">
           <label class="text-sm font-medium">Категория</label>
           <select
             v-model="delete_category_id"
