@@ -35,7 +35,9 @@
           <label class="text-sm font-medium">Git</label>
           <input v-model="linkGit" class="bg-slate-100 w-full border rounded-lg px-3 py-2 text-sm" type="text" />
         </div>
-        <button type="submit" class="text-green-600 cursor-pointer border rounded-lg px-4 py-2 text-sm hover:translate-y-[-1px] transition">Добавить</button>
+        <div class="flex justify-end">
+          <button type="submit" class="text-green-600 cursor-pointer border rounded-lg px-4 py-2 text-sm hover:translate-y-[-1px] transition">Добавить</button>
+        </div>
       </form>
     </div>
     <div class="lg:w-1/2 w-full overflow-x-auto bg-white rounded-xl shadow-sm p-4">
