@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col lg:flex-row gap-4">
-    <div class="w-full overflow-x-auto bg-white rounded-xl shadow-sm p-4">
+    <div class="w-1/2 overflow-x-auto bg-white rounded-xl shadow-sm p-4">
       <form @submit.prevent="submitProject" class="space-y-4">
 
         <div class="grid grid-cols-[68px_1fr] items-center gap-2">
@@ -38,7 +38,7 @@
         <button type="submit" class="text-green-600 cursor-pointer border rounded-lg px-4 py-2 text-sm hover:translate-y-[-1px] transition">Добавить</button>
       </form>
     </div>
-    <div class="px-4 py-2 overflow-x-auto bg-white rounded-xl shadow-sm p-4">
+    <div class="w-1/2 overflow-x-auto bg-white rounded-xl shadow-sm p-4">
       <form @submit.prevent="submitCategory" class="mb-4">
         <div class="grid grid-cols-[68px_auto_96px] items-center gap-2">
           <label class="text-sm font-medium">Название</label>
