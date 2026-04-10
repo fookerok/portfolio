@@ -15,10 +15,10 @@
                     <thead class="bg-gray-50 border-b border-gray-200">
                         <tr>
                             <th class="p-4 font-semibold text-gray-600 whitespace-nowrap">Категория</th>
-                            <th class="p-4 font-semibold text-gray-600 whitespace-nowrap">Название</th>
-                            <th class="p-4 font-semibold text-gray-600 whitespace-nowrap">Описание</th>
-                            <th class="p-4 font-semibold text-gray-600 whitespace-nowrap">Сайт</th>
-                            <th class="p-4 font-semibold text-gray-600 whitespace-nowrap">Репозиторий</th>
+                            <th class="px-1 py-4 font-semibold text-gray-600 whitespace-nowrap">Название</th>
+                            <th class="px-1 py-4 font-semibold text-gray-600 whitespace-nowrap">Описание</th>
+                            <th class="px-1 py-4 font-semibold text-gray-600 whitespace-nowrap">Сайт</th>
+                            <th class="px-1 py-4 font-semibold text-gray-600 whitespace-nowrap">Репозиторий</th>
                             <th class="p-4 font-semibold text-gray-600 whitespace-nowrap">Действия</th>
                         </tr>
                     </thead>
@@ -38,26 +38,26 @@
                             </select>
                         </td>
 
-                        <td class="p-4 min-w-[150px]">
+                        <td class="px-1 py-4 min-w-[150px]">
                             <span v-if="editingId !== project.id">{{ project.name }}</span>
                             <input v-else v-model="project.name" class="border p-1 w-full" />
                         </td>
 
-                        <td class="p-4 min-w-[250px]">
+                        <td class="px-1 py-4 min-w-[250px]">
                             <span v-if="editingId !== project.id" class="line-clamp-2">
                                 {{ project.descr }}
                             </span>
                             <textarea v-else v-model="project.descr" class="border p-1 w-full"></textarea>
                         </td>
 
-                        <td class="p-4 min-w-[80px] break-all">
+                        <td class="px-1 py-4 min-w-[80px] break-all">
                             <a v-if="editingId !== project.id" :href="project.linkSite" target="_blank" class="text-blue-600">
                                 Link
                             </a>
                             <input v-else v-model="project.linkSite" class="border p-1 w-full" />
                         </td>
 
-                        <td class="p-4 min-w-[80px] break-all">
+                        <td class="px-1 py-4 min-w-[80px] break-all">
                             <a v-if="editingId !== project.id" :href="project.linkGit" target="_blank" class="text-blue-600">
                                 Git
                             </a>
@@ -65,9 +65,9 @@
                         </td>
 
                         <td class="p-4 whitespace-nowrap">
-                            <div v-if="editingId === project.id">
-                                <button @click="editProject(project)">Сохранить</button>
-                                <button @click="editingId = null">Отмена</button>
+                            <div class="flex flex-col" v-if="editingId === project.id">
+                                <button class="text-green-600 cursor-pointer" @click="editProject(project)">Сохранить</button>
+                                <button class="delete-btn cursor-pointer" @click="editingId = null">Отмена</button>
                             </div>
 
                             <div class="flex flex-col gap-1" v-else>
@@ -154,7 +154,5 @@
 </script>
 
 <style lang="scss" scoped>
-.delete-btn{
-    color: rgb(242, 76, 76);
-}
+
 </style>

@@ -10,13 +10,13 @@
                 Назад
                 </router-link>
             </div>
-            <CategoryAdd/>
+            <ProjectAdd/>
         </div>
     </Admin>
 </template>
 
 <script setup>
-import CategoryAdd from '../components/CategoryAdd.vue';
+import ProjectAdd from '../components/ProjectAdd.vue';
 import Admin from './Admin.vue';
 
 </script>

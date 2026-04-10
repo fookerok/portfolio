@@ -3,7 +3,7 @@
         <div class="header-wrapper flex justify-between p-4 bg-white rounded-xl items-center">
             <div class="menu-home flex gap-4 items-center">
                 <router-link to="/" class="logo">H</router-link>
-                <button class="cursor-pointer burger" @click.stop="toggleMenu">
+                <button class="cursor-pointer burger"  @click.stop="toggleMenu">
                     <SvgIcon width="24px" height="24px" icon="#burger"/>
                 </button>
                 <nav class="nav" :class="{ open: isMenuOpen }">
@@ -40,7 +40,7 @@ const logout = () => {
 const menuCMS = ref([
     { id:'1', title: 'Проекты', link: '/admin/projects' },
     { id:'2', title: 'Общая информация', link: '/admin/info' },
-    { id:'3', title: 'Соц сети', link: '/admin/social' }
+    { id:'3', title: 'Соц сети', link: '/admin/social' },
 ])
 
 const isMenuOpen = ref(false)
@@ -91,6 +91,10 @@ onBeforeUnmount(() => {
 
 .nav {
     display: block;
+}
+
+.burger{
+    display: none;
 }
 
 @media (max-width: 562px) {

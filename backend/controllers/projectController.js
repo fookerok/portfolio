@@ -54,5 +54,5 @@ module.exports = {
   getProjects,
   addProject,
   deleteProject,
-  editProject
+  editProject,
 };
