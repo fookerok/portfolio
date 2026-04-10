@@ -1,6 +1,6 @@
 <template>
-  <div class="flex flex-col lg:flex-row gap-4">
-    <div class="lg:w-1/2 w-full overflow-x-auto bg-white rounded-xl shadow-sm p-4">
+  <div class="flex flex-col md:flex-row gap-4">
+    <div class="md:w-1/2 w-full overflow-x-auto bg-white rounded-xl shadow-sm p-4">
       <form @submit.prevent="submitProject" class="space-y-4">
 
         <div class="grid grid-cols-[68px_1fr] items-center gap-2">
@@ -40,7 +40,7 @@
         </div>
       </form>
     </div>
-    <div class="lg:w-1/2 w-full overflow-x-auto bg-white rounded-xl shadow-sm p-4">
+    <div class="md:w-1/2 w-full overflow-x-auto bg-white rounded-xl shadow-sm p-4">
       <form @submit.prevent="submitCategory" class="mb-4">
         <div class="grid grid-cols-[68px_auto_96px] items-center gap-2">
           <label class="text-sm font-medium">Название</label>
