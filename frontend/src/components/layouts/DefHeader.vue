@@ -40,7 +40,7 @@ const logout = () => {
 const menuCMS = ref([
     { id:'1', title: 'Проекты', link: '/admin/projects' },
     { id:'2', title: 'Общая информация', link: '/admin/info' },
-    { id:'3', title: 'Соц сети', link: '/admin/social' },
+    { id:'3', title: 'Социальные сети', link: '/admin/social' },
 ])
 
 const isMenuOpen = ref(false)
@@ -80,13 +80,6 @@ onBeforeUnmount(() => {
 .logo {
     font-weight: bold;
     font-size: 18px;
-}
-
-.btn-exit {
-    background-color: rgb(242, 76, 76);
-    padding: 5px 13px;
-    border-radius: 12px;
-    color: white;
 }
 
 .nav {

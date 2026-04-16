@@ -47,3 +47,5 @@ INSERT INTO settings (id, site_title, site_name, site_description, link_tg, link
 INSERT INTO category (name) 
 VALUES ('Vue project'), ('React project'), ('Backend')
 ON CONFLICT (name) DO NOTHING;
+
+ALTER TABLE settings ADD COLUMN IF NOT EXISTS image TEXT;

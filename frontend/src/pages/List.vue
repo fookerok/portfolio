@@ -5,7 +5,7 @@
 	<transition v-else name="fade-slide" appear>
 			<div class="max-w-4xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
 				<div class="img-block rounded-xl overflow-hidden mb-8">
-					<img class="object-cover" src="../assets/img/myphoto.webp" alt="">
+					  <img v-if="imageUrl" class="w-full max-h-[350px] object-cover" :src="imageUrl" alt="">
 				</div>
 				<div class="flex justify-between px-6">
 					<div class="flex flex-col gap-1 mb-6">
@@ -35,6 +35,8 @@ import axios from 'axios';
 import Preloader from '../components/Preloader.vue';
 import ProjectList from '../components/ProjectList.vue';
 
+const imageUrl = ref('');
+
 const loading = ref(true);
 const settings = ref({
     site_name: '',
@@ -51,6 +53,9 @@ const loadAppData = async () => {
             settings.value = res.data;
             document.title = settings.value.site_title || 'Portfolio';
         }
+		if (res.data.image) {
+			imageUrl.value = `${import.meta.env.VITE_API_URL}${res.data.image}`;
+		}
     } catch (err) {
         console.error('Ошибка при загрузке данных:', err);
     } finally {

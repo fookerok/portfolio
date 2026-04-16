@@ -6,6 +6,7 @@ import List from '../pages/List.vue'
 import Projects from '../pages/Projects.vue'
 import AddProject from '../pages/AddProject.vue'
 import Info from '../pages/Info.vue'
+import Social from '../pages/Social.vue'
 
 const routes = [
   {
@@ -32,6 +33,10 @@ const routes = [
   {
     path: '/admin/info',
     component: Info
+  },
+  {
+    path: '/admin/social',
+    component: Social
   }
 ]
 
